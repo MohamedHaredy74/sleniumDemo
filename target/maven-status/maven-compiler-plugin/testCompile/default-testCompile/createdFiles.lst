@@ -1,0 +1,7 @@
+login_tests\InValidLogin.class
+base_tests\BaseTest.class
+login_tests\validLogin.class
+search_tests\searchResultValidation.class
+currencies_tests\Currency.class
+search_tests\searchWithSkuValue.class
+register_tests\ValidRegister.class
