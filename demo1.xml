@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+
+    <test name="login_tests">
+        <classes>
+            <class name="login_tests.validLogin"/>
+            <class name="register_tests.ValidRegister"></class>
+            <class name="search_tests.searchResultValidation"></class>
+        </classes>
+    </test>
+</suite>
