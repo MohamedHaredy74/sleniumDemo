@@ -22,8 +22,7 @@ public class ValidRegister extends BaseTest {
              .setPasswordField("Test!123")
              .setConfirmPasswordField("Test!123")
              .clickRegister();
-
-
+     
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(new MyAccountPage(driver).getRegisterMessageText().contains("Your registration completed"),"No Success msg Displayed");
         softAssert.assertTrue(new MyAccountPage(driver).getRegisterMessageColor().contains("rgba(76, 177, 124, 1)"),"Error with Message color");

@@ -3,6 +3,8 @@ package currencies_tests;
 import base_tests.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pages.HomePage;
+
 import static utils.Currency.*;
 
 import java.util.List;

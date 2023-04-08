@@ -1,5 +1,6 @@
 pages\RegisterPage.class
-org\example\Main.class
 pages\LoginPage.class
+utils\SkuKeyword.class
+utils\Currency.class
 pages\HomePage.class
 pages\MyAccountPage.class

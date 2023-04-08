@@ -1,156 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="7" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-08T15:10:55 EET" name="Suite1" finished-at="2023-04-08T15:11:00 EET" duration-ms="5814">
+  <suite started-at="2023-04-08T23:46:55 EET" name="Suite1" finished-at="2023-04-08T23:47:20 EET" duration-ms="24612">
     <groups>
     </groups>
-    <test started-at="2023-04-08T15:10:55 EET" name="login_tests" finished-at="2023-04-08T15:11:00 EET" duration-ms="5814">
-      <class name="login_tests.validLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:login_tests.validLogin@d5b810e]" started-at="2023-04-08T15:10:55 EET" name="setUp" finished-at="2023-04-08T15:11:00 EET" duration-ms="5625" status="PASS">
+    <test started-at="2023-04-08T23:46:55 EET" name="login_tests" finished-at="2023-04-08T23:47:20 EET" duration-ms="24612">
+      <class name="currencies_tests.Currency">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:14 EET" name="setUp" finished-at="2023-04-08T23:47:19 EET" duration-ms="4575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:login_tests.validLogin@d5b810e]" started-at="2023-04-08T15:11:00 EET" name="loginWithValidCredentials" finished-at="2023-04-08T15:11:00 EET" duration-ms="2" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at pages.HomePage.clickLoginIcon(HomePage.java:49)
-at login_tests.validLogin.loginWithValidCredentials(validLogin.java:16)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="testIfCurrencyChangedOverAllProducts()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:19 EET" name="testIfCurrencyChangedOverAllProducts" finished-at="2023-04-08T23:47:20 EET" duration-ms="821" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:login_tests.validLogin@d5b810e]" started-at="2023-04-08T15:11:00 EET" name="tearDown" finished-at="2023-04-08T15:11:00 EET" duration-ms="152" status="PASS">
+        </test-method> <!-- testIfCurrencyChangedOverAllProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:20 EET" name="tearDown" finished-at="2023-04-08T23:47:20 EET" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- login_tests.validLogin -->
+      </class> <!-- currencies_tests.Currency -->
+      <class name="login_tests.InValidLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:46:55 EET" name="setUp" finished-at="2023-04-08T23:47:00 EET" duration-ms="5078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginWithInvalidEmailAndPassword()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:47:00 EET" name="loginWithInvalidEmailAndPassword" finished-at="2023-04-08T23:47:02 EET" duration-ms="1947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmailAndPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:47:02 EET" name="tearDown" finished-at="2023-04-08T23:47:02 EET" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- login_tests.InValidLogin -->
       <class name="register_tests.ValidRegister">
-        <test-method signature="registerWithValidCredentials()[pri:0, instance:register_tests.ValidRegister@5a56cdac]" started-at="2023-04-08T15:11:00 EET" name="registerWithValidCredentials" finished-at="2023-04-08T15:11:00 EET" duration-ms="1" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at pages.HomePage.clickRegisterIcon(HomePage.java:44)
-at register_tests.ValidRegister.registerWithValidCredentials(ValidRegister.java:15)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:02 EET" name="setUp" finished-at="2023-04-08T23:47:07 EET" duration-ms="4148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerWithValidCredentials()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:07 EET" name="registerWithValidCredentials" finished-at="2023-04-08T23:47:09 EET" duration-ms="2495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:09 EET" name="tearDown" finished-at="2023-04-08T23:47:09 EET" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- register_tests.ValidRegister -->
       <class name="search_tests.searchResultValidation">
-        <test-method signature="searchAndValidateResults()[pri:0, instance:search_tests.searchResultValidation@7c711375]" started-at="2023-04-08T15:11:00 EET" name="searchAndValidateResults" finished-at="2023-04-08T15:11:00 EET" duration-ms="0" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at pages.HomePage.setSearchField(HomePage.java:68)
-at search_tests.searchResultValidation.searchAndValidateResults(searchResultValidation.java:16)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:09 EET" name="setUp" finished-at="2023-04-08T23:47:13 EET" duration-ms="3719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchAndValidateResults()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:13 EET" name="searchAndValidateResults" finished-at="2023-04-08T23:47:14 EET" duration-ms="1011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchAndValidateResults -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:14 EET" name="tearDown" finished-at="2023-04-08T23:47:14 EET" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- search_tests.searchResultValidation -->
     </test> <!-- login_tests -->
   </suite> <!-- Suite1 -->

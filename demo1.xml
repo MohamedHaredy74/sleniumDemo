@@ -4,10 +4,10 @@
 
     <test name="login_tests">
         <classes>
-            <class name="login_tests.validLogin"/>
-            <class name="register_tests.ValidRegister"></class>
-            <class name="search_tests.searchResultValidation"></class>
-            <class name="currencies_tests.Currency"></class>
+            <class name="login_tests.InValidLogin"/>
+            <class name="register_tests.ValidRegister"/>
+            <class name="search_tests.searchResultValidation"/>
+            <class name="currencies_tests.Currency"/>
 
         </classes>
     

@@ -12,29 +12,28 @@ import java.time.Duration;
 
 
 public class BaseTest {
-    protected   WebDriver driver;
-   public HomePage homePage=null;
+    protected WebDriver driver;
+    protected HomePage homePage;
 
     private final String demoLink ="https://demo.nopcommerce.com/";
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp()
     {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options=new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver =new ChromeDriver(options);
-        driver.manage().window().fullscreen();
         homePage=new HomePage(driver);
         driver.navigate().to(demoLink);
+        driver.manage().window().fullscreen();
 
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown()
     {
         driver.quit();
-
     }
 
 

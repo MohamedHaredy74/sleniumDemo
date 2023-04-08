@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite1" class="navigator-link">
-              <span class="suite-name border-failed">Suite1</span>
+              <span class="suite-name border-passed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,31 +93,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 3 failed,   </span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods passed suite-Suite1"> (hide)</a> <!-- hide-methods passed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
                     </span>
-                    <div class="method-list-content failed suite-Suite1">
+                    <div class="method-list-content passed suite-Suite1">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="login_tests.validLogin" class="method navigator-link" hash-for-method="loginWithValidCredentials">loginWithValidCredentials</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="login_tests.InValidLogin" class="method navigator-link" hash-for-method="loginWithInvalidEmailAndPassword">loginWithInvalidEmailAndPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="register_tests.ValidRegister" class="method navigator-link" hash-for-method="registerWithValidCredentials">registerWithValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="search_tests.searchResultValidation" class="method navigator-link" hash-for-method="searchAndValidateResults">searchAndValidateResults</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite1 -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="currencies_tests.Currency" class="method navigator-link" hash-for-method="testIfCurrencyChangedOverAllProducts">testIfCurrencyChangedOverAllProducts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,30 +134,39 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-failed">
+          <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">register_tests.ValidRegister</span>
+              <img src="passed.png"/>
+              <span class="class-name">currencies_tests.Currency</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="registerWithValidCredentials">
-                  </a> <!-- registerWithValidCredentials -->
-                  <span class="method-name">registerWithValidCredentials</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at pages.HomePage.clickRegisterIcon(HomePage.java:44)
-	at register_tests.ValidRegister.registerWithValidCredentials(ValidRegister.java:15)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <a name="testIfCurrencyChangedOverAllProducts">
+                  </a> <!-- testIfCurrencyChangedOverAllProducts -->
+                  <span class="method-name">testIfCurrencyChangedOverAllProducts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-failed -->
-          <div class="suite-Suite1-class-failed">
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
+              <span class="class-name">login_tests.InValidLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidEmailAndPassword">
+                  </a> <!-- loginWithInvalidEmailAndPassword -->
+                  <span class="method-name">loginWithInvalidEmailAndPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">search_tests.searchResultValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -161,37 +175,25 @@
                   <a name="searchAndValidateResults">
                   </a> <!-- searchAndValidateResults -->
                   <span class="method-name">searchAndValidateResults</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at pages.HomePage.setSearchField(HomePage.java:68)
-	at search_tests.searchResultValidation.searchAndValidateResults(searchResultValidation.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-failed -->
-          <div class="suite-Suite1-class-failed">
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">login_tests.validLogin</span>
+              <img src="passed.png"/>
+              <span class="class-name">register_tests.ValidRegister</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithValidCredentials">
-                  </a> <!-- loginWithValidCredentials -->
-                  <span class="method-name">loginWithValidCredentials</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at pages.HomePage.clickLoginIcon(HomePage.java:49)
-	at login_tests.validLogin.loginWithValidCredentials(validLogin.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <a name="registerWithValidCredentials">
+                  </a> <!-- registerWithValidCredentials -->
+                  <span class="method-name">registerWithValidCredentials</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-failed -->
+          </div> <!-- suite-Suite1-class-passed -->
         </div> <!-- panel Suite1 -->
         <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -204,9 +206,10 @@
 &lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;login_tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;login_tests.validLogin&quot;/&gt;
+      &lt;class name=&quot;login_tests.InValidLogin&quot;/&gt;
       &lt;class name=&quot;register_tests.ValidRegister&quot;/&gt;
       &lt;class name=&quot;search_tests.searchResultValidation&quot;/&gt;
+      &lt;class name=&quot;currencies_tests.Currency&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- login_tests --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -220,7 +223,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">login_tests (3 classes)</span>
+                <span class="test-name">login_tests (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,24 +249,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithValidCredentials')
-data.setCell(0, 2, 'login_tests.validLogin')
-data.setCell(0, 3, 2);
+data.setCell(0, 1, 'registerWithValidCredentials')
+data.setCell(0, 2, 'register_tests.ValidRegister')
+data.setCell(0, 3, 2495);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'registerWithValidCredentials')
-data.setCell(1, 2, 'register_tests.ValidRegister')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'loginWithInvalidEmailAndPassword')
+data.setCell(1, 2, 'login_tests.InValidLogin')
+data.setCell(1, 3, 1947);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'searchAndValidateResults')
 data.setCell(2, 2, 'search_tests.searchResultValidation')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 1011);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testIfCurrencyChangedOverAllProducts')
+data.setCell(3, 2, 'currencies_tests.Currency')
+data.setCell(3, 3, 821);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 ms</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -278,27 +285,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">register_tests.ValidRegister</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">search_tests.searchResultValidation</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite1" class="panel">
@@ -307,42 +296,64 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">login_tests.validLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
+              <div class="chronological-class-name">login_tests.InValidLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginWithValidCredentials</span>
-                <span class="method-start">5648 ms</span>
+                <span class="method-name">loginWithInvalidEmailAndPassword</span>
+                <span class="method-start">5079 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">7027 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">register_tests.ValidRegister</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">7214 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">registerWithValidCredentials</span>
-                <span class="method-start">5656 ms</span>
+                <span class="method-start">11362 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">13858 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">search_tests.searchResultValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">14106 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">searchAndValidateResults</span>
-                <span class="method-start">5658 ms</span>
+                <span class="method-start">17826 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">18837 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">login_tests.validLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
+              <div class="chronological-class-name">currencies_tests.Currency</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">19004 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testIfCurrencyChangedOverAllProducts</span>
+                <span class="method-start">23579 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5659 ms</span>
-              </div> <!-- configuration-test after -->
+                <span class="method-start">24400 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

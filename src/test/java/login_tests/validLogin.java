@@ -13,7 +13,7 @@ public class validLogin extends BaseTest {
     @Test
     public void loginWithValidCredentials()
     {
-      homePage.clickLoginIcon()
+        homePage.clickLoginIcon()
               .setEmailField(validEmail)
               .setPasswordField(validPassword)
               .clickLoginButton();
