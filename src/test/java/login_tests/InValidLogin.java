@@ -10,10 +10,10 @@ public class InValidLogin extends BaseTest {
     @Test
     public void loginWithInvalidEmailAndPassword()
     {
-       var login= homePage.clickLoginIcon();
-       login.setEmailField("sdfgfd@gmail.com");
-       login.setPasswordField("654123");
-       var myAccount=login.clickLoginButton();
+        var myAccount= homePage.clickLoginIcon()
+                .setEmailField("dfrgtf@dfg.com")
+                .setPasswordField("Test!123")
+                .clickLoginButton();
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(myAccount.getUnSuccessLoginMessageText().contains("Login was unsuccessful"),"Login Message Assertion");
         softAssert.assertEquals(myAccount.getUnSuccessLoginMessageColorInHexFormat(),"#e4434b","Error With Color Assertion");
