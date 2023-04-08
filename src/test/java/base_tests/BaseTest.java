@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
+import pages.HomePage;
 
 
 import java.time.Duration;
@@ -12,6 +13,8 @@ import java.time.Duration;
 
 public class BaseTest {
     protected   WebDriver driver;
+   public HomePage homePage=null;
+
     private final String demoLink ="https://demo.nopcommerce.com/";
 
     @BeforeTest
@@ -22,6 +25,7 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
         driver =new ChromeDriver(options);
         driver.manage().window().fullscreen();
+        homePage=new HomePage(driver);
         driver.navigate().to(demoLink);
 
     }

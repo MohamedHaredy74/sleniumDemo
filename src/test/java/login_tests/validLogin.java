@@ -9,7 +9,7 @@ import pages.HomePage;
 public class validLogin extends BaseTest {
     private String validEmail="automation@gmail.com";
     private String validPassword="Test!123";
-    HomePage homePage=new HomePage(driver);
+
     @Test
     public void loginWithValidCredentials()
     {

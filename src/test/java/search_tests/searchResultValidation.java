@@ -9,12 +9,12 @@ import pages.HomePage;
 
 public class searchResultValidation  extends BaseTest {
     private String searchKeyword="laptop";
-    HomePage homePage=new HomePage(driver);
+
     @Test
     public void searchAndValidateResults()
     {
-        homePage.setSearchField(searchKeyword);
-        homePage.clickSearchButton();
+        homePage.setSearchField(searchKeyword)
+                        .clickSearchButton();
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(homePage.getCurrentURL().contains(searchKeyword),"SearchKeyword Not Found");
 

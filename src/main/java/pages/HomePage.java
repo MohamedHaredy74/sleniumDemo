@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.Currency;
+
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -51,8 +53,8 @@ public class HomePage {
     }
     private  Select getDropDownList(By locator)
     {return new Select(driver.findElement(locator));}
-    public void selectCurrency(String currency) {
-        getDropDownList(currencyList).selectByVisibleText(currency);
+    public void selectCurrency(Currency value) {
+        getDropDownList(currencyList).selectByVisibleText(String.valueOf(value));
     }
 
     public List<String > getCurrenciesOfProducts() {
@@ -63,12 +65,15 @@ public class HomePage {
         }
         return TextOfProducts;
         }
-        public void setSearchField(String keyword)
+        public HomePage setSearchField(String keyword)
         {
             driver.findElement(searchField).sendKeys(keyword);
+            return this;
         }
-        public void clickSearchButton()
-        {driver.findElement(searchButton).click();}
+        public HomePage clickSearchButton()
+        {driver.findElement(searchButton).click();
+        return this;
+        }
 
         public List<String > getProductsTextOfSearchResult() {
         elementList = driver.findElements(productsTitle);
