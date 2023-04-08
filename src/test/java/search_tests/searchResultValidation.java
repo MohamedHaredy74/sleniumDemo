@@ -3,7 +3,6 @@ package search_tests;
 import base_tests.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.HomePage;
 
 
 
@@ -18,9 +17,8 @@ public class searchResultValidation  extends BaseTest {
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(homePage.getCurrentURL().contains(searchKeyword),"SearchKeyword Not Found");
 
-       for(String title :homePage.getProductsTextOfSearchResult())
+       for(String title : homePage.getProductsTextOfSearchResult())
        {
-           System.out.println(title);
            softAssert.assertTrue(title.contains(searchKeyword));
        }
        softAssert.assertAll();

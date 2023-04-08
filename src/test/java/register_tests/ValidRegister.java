@@ -8,7 +8,8 @@ import pages.MyAccountPage;
 
 
 public class ValidRegister extends BaseTest {
-    HomePage homePage=new HomePage(driver);
+    String date= String.valueOf(System.currentTimeMillis());
+    String mail="automation"+date+"@gmail.com";
     @Test
     public void registerWithValidCredentials()
     {
@@ -17,7 +18,7 @@ public class ValidRegister extends BaseTest {
              .setFirstName("test")
              .setLastName("automation")
              .setBirthDate("1","10","1999")
-             .setEmailField("automation20@gmail.com")
+             .setEmailField(mail)
              .setPasswordField("Test!123")
              .setConfirmPasswordField("Test!123")
              .clickRegister();

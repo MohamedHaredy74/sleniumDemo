@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Currency;
+import utils.SkuKeyword;
 
 
 import java.time.Duration;
@@ -70,9 +71,15 @@ public class HomePage {
             driver.findElement(searchField).sendKeys(keyword);
             return this;
         }
-        public HomePage clickSearchButton()
-        {driver.findElement(searchButton).click();
+    public HomePage searchWithSKU(SkuKeyword keyword)
+    {
+        driver.findElement(searchField).sendKeys(keyword.toString());
         return this;
+    }
+        public HomePage clickSearchButton()
+        {
+            driver.findElement(searchButton).click();
+            return this;
         }
 
         public List<String > getProductsTextOfSearchResult() {
