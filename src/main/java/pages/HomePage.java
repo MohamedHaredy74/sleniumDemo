@@ -54,8 +54,9 @@ public class HomePage {
     }
     private  Select getDropDownList(By locator)
     {return new Select(driver.findElement(locator));}
-    public void selectCurrency(Currency value) {
-        getDropDownList(currencyList).selectByVisibleText(String.valueOf(value));
+    public HomePage selectCurrency(Currency value) {
+        getDropDownList(currencyList).selectByVisibleText(value.toString());
+        return this;
     }
 
     public List<String > getCurrenciesOfProducts() {
