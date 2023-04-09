@@ -2,62 +2,62 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-08T23:46:55 EET" name="Suite1" finished-at="2023-04-08T23:47:20 EET" duration-ms="24612">
+  <suite started-at="2023-04-09T00:14:25 EET" name="Suite1" finished-at="2023-04-09T00:14:53 EET" duration-ms="27871">
     <groups>
     </groups>
-    <test started-at="2023-04-08T23:46:55 EET" name="login_tests" finished-at="2023-04-08T23:47:20 EET" duration-ms="24612">
+    <test started-at="2023-04-09T00:14:25 EET" name="login_tests" finished-at="2023-04-09T00:14:53 EET" duration-ms="27871">
       <class name="currencies_tests.Currency">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:14 EET" name="setUp" finished-at="2023-04-08T23:47:19 EET" duration-ms="4575" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-09T00:14:47 EET" name="setUp" finished-at="2023-04-09T00:14:51 EET" duration-ms="4104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testIfCurrencyChangedOverAllProducts()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:19 EET" name="testIfCurrencyChangedOverAllProducts" finished-at="2023-04-08T23:47:20 EET" duration-ms="821" status="PASS">
+        <test-method signature="testIfCurrencyChangedOverAllProducts()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-09T00:14:51 EET" name="testIfCurrencyChangedOverAllProducts" finished-at="2023-04-09T00:14:53 EET" duration-ms="1384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIfCurrencyChangedOverAllProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-08T23:47:20 EET" name="tearDown" finished-at="2023-04-08T23:47:20 EET" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:currencies_tests.Currency@7c24b813]" started-at="2023-04-09T00:14:53 EET" name="tearDown" finished-at="2023-04-09T00:14:53 EET" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- currencies_tests.Currency -->
       <class name="login_tests.InValidLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:46:55 EET" name="setUp" finished-at="2023-04-08T23:47:00 EET" duration-ms="5078" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-09T00:14:25 EET" name="setUp" finished-at="2023-04-09T00:14:31 EET" duration-ms="6294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithInvalidEmailAndPassword()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:47:00 EET" name="loginWithInvalidEmailAndPassword" finished-at="2023-04-08T23:47:02 EET" duration-ms="1947" status="PASS">
+        <test-method signature="loginWithInvalidEmailAndPassword()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-09T00:14:31 EET" name="loginWithInvalidEmailAndPassword" finished-at="2023-04-09T00:14:33 EET" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidEmailAndPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-08T23:47:02 EET" name="tearDown" finished-at="2023-04-08T23:47:02 EET" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:login_tests.InValidLogin@ea6147e]" started-at="2023-04-09T00:14:33 EET" name="tearDown" finished-at="2023-04-09T00:14:33 EET" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- login_tests.InValidLogin -->
       <class name="register_tests.ValidRegister">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:02 EET" name="setUp" finished-at="2023-04-08T23:47:07 EET" duration-ms="4148" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-09T00:14:33 EET" name="setUp" finished-at="2023-04-09T00:14:38 EET" duration-ms="4352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerWithValidCredentials()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:07 EET" name="registerWithValidCredentials" finished-at="2023-04-08T23:47:09 EET" duration-ms="2495" status="PASS">
+        <test-method signature="registerWithValidCredentials()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-09T00:14:38 EET" name="registerWithValidCredentials" finished-at="2023-04-09T00:14:40 EET" duration-ms="2690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-08T23:47:09 EET" name="tearDown" finished-at="2023-04-08T23:47:09 EET" duration-ms="248" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:register_tests.ValidRegister@5d7148e2]" started-at="2023-04-09T00:14:40 EET" name="tearDown" finished-at="2023-04-09T00:14:41 EET" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- register_tests.ValidRegister -->
       <class name="search_tests.searchResultValidation">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:09 EET" name="setUp" finished-at="2023-04-08T23:47:13 EET" duration-ms="3719" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-09T00:14:41 EET" name="setUp" finished-at="2023-04-09T00:14:45 EET" duration-ms="4574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchAndValidateResults()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:13 EET" name="searchAndValidateResults" finished-at="2023-04-08T23:47:14 EET" duration-ms="1011" status="PASS">
+        <test-method signature="searchAndValidateResults()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-09T00:14:45 EET" name="searchAndValidateResults" finished-at="2023-04-09T00:14:47 EET" duration-ms="1713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchAndValidateResults -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-08T23:47:14 EET" name="tearDown" finished-at="2023-04-08T23:47:14 EET" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:search_tests.searchResultValidation@25fb8912]" started-at="2023-04-09T00:14:47 EET" name="tearDown" finished-at="2023-04-09T00:14:47 EET" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
