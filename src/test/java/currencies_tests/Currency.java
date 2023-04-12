@@ -3,7 +3,6 @@ package currencies_tests;
 import base_tests.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.HomePage;
 
 import static utils.Currency.*;
 
@@ -21,7 +20,7 @@ public class Currency extends BaseTest{
         SoftAssert softAssert=new SoftAssert();
       for (String text :currencyText)
       {
-          softAssert.assertTrue(text.contains("€"));
+          softAssert.assertTrue(text.contains("€"));//€
           softAssert.assertAll();
       }
     }

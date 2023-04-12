@@ -13,6 +13,7 @@ public class ValidRegister extends BaseTest {
     @Test
     public void registerWithValidCredentials()
     {
+
      homePage.clickRegisterIcon()
              .selectMAleGender()
              .setFirstName("test")

@@ -2,12 +2,9 @@
 
 <suite name="Suite1" verbose="1" >
 
-    <test name="login_tests">
+    <test name="multiple_tests">
         <classes>
             <class name="login_tests.InValidLogin"/>
-            <class name="register_tests.ValidRegister"/>
-            <class name="search_tests.searchResultValidation"/>
-            <class name="currencies_tests.Currency"/>
 
         </classes>
     
