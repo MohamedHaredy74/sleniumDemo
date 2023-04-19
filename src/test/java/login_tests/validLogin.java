@@ -2,6 +2,7 @@ package login_tests;
 
 import base_tests.BaseTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 
 
@@ -13,9 +14,14 @@ public class validLogin extends BaseTest {
     @Test
     public void loginWithValidCredentials()
     {
+        homePage=new HomePage(driver);
+        var myAccountPage=
         homePage.clickLoginIcon()
               .setEmailField(validEmail)
               .setPasswordField(validPassword)
               .clickLoginButton();
+
+        SoftAssert softAssert=new SoftAssert();
+        softAssert.assertTrue(myAccountPage.isMyAccountDisplayed(),"Login Failed");
     }
 }

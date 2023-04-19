@@ -2,8 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-
+import org.openqa.selenium.support.Color;
 
 
 public class LoginPage {
@@ -17,8 +16,8 @@ public class LoginPage {
     private By emailField =By.id("Email");
     private By passwordField=By.id("Password");
     private By loginButton=By.xpath("//button[contains(text(),'Log')]");
-
     private By emailErrorMessage=By.id("Email-error");
+    private By unSuccessLoginMessage = By.xpath("//div[contains(text(),'Login was unsuccessful')]");
 
 
     public LoginPage setEmailField(String email)
@@ -35,6 +34,19 @@ public class LoginPage {
     {
         driver.findElement(loginButton).click();
         return new MyAccountPage(driver);
+    }
+
+    public LoginPage clickLoginExpectToFail()
+    {
+        driver.findElement(loginButton).click();
+        return this;
+    }
+    public String getUnSuccessLoginMessageColorInHexFormat() {
+        String color = Color.fromString(driver.findElement(unSuccessLoginMessage).getCssValue("color")).asHex();
+        return color;
+    }
+    public String getUnSuccessLoginMessageText() {
+        return driver.findElement(unSuccessLoginMessage).getText();
     }
 
 

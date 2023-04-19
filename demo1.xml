@@ -2,11 +2,26 @@
 
 <suite name="Suite1" verbose="1" >
 
-    <test name="multiple_tests">
+    <test name="multiple_tests1">
         <classes>
-            <class name="login_tests.InValidLogin"/>
+            <class name="login_tests.InValidLogin">
+                <methods>
+                    <include name="loginWithInvalidEmailAndPassword1"/>
+                </methods>
+            </class>
+            <class name="register_tests.ValidRegister">
+                <methods>
+                    <include name="registerWithValidCredentials"/>
+                    <include name="registerWithValidData"/>
+                </methods>
+            </class>
+            <class name="currencies_tests.Currency">
+                <methods>
+                    <include name="Currency"/>
+                </methods>
+            </class>
 
         </classes>
-    
     </test>
+
 </suite>

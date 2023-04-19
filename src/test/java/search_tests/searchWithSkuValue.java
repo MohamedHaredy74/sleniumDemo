@@ -13,6 +13,7 @@ public class searchWithSkuValue extends BaseTest {
     @Test
     public void searchWithSkuValue()
     {
+        homePage=new HomePage(driver);
         homePage.searchWithSKU(SOUND_FORG_PRO11)
                         .clickSearchButton()
                                 .clickOnPicture();

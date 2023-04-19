@@ -3,10 +3,16 @@ package base_tests;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.jetbrains.annotations.NotNull;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
@@ -18,11 +24,13 @@ import java.lang.reflect.Method;
 
 
 public class BaseTest {
-    protected WebDriver driver;
-    protected HomePage homePage;
-    protected ExtentReports extentReports;
+    public static WebDriver driver;
+    public static HomePage homePage;
+
+    public static ExtentReports extentReports;
+    public static ExtentTest test;
     ExtentSparkReporter sparkReporter;
-    ExtentTest test;
+
     ChromeOptions options = new ChromeOptions();
     private final String demoLink = "https://demo.nopcommerce.com/";
 
@@ -33,63 +41,69 @@ public class BaseTest {
         extentReports=new ExtentReports();
         sparkReporter=new ExtentSparkReporter("reports/extentReprt.html");
         extentReports.attachReporter(sparkReporter);
+        sparkReporter.config().enableOfflineMode(true);
+        sparkReporter.config().setDocumentTitle("seleniumDemo");
+        sparkReporter.config().setReportName("Project Report");
+        sparkReporter.config().setTheme(Theme.DARK);
+        sparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+
+
     }
 
+
+    @BeforeTest
+    public void setUp()
+    {
+        WebDriverManager.chromedriver().setup();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
+        driver.manage().window().fullscreen();
+        System.out.println("Befor test");
+    }
+    @BeforeClass
+    public void goHome()
+    {
+        driver.navigate().to(demoLink);
+    }
+
+    @BeforeMethod
+    public void creatTest(Method method) {
+        System.out.println("Befor Method");
+        test=extentReports.createTest(method.getName());
+
+    }
+
+    @AfterMethod
+    public void getResult(ITestResult result) throws IOException {
+        System.out.println("After Method");
+        System.out.println(result.getName());
+        if (ITestResult.SUCCESS == result.getStatus()) {
+            test.pass("test is pass");
+        } else if (ITestResult.FAILURE == result.getStatus()) {
+            var camera=(TakesScreenshot)driver;
+             File screen = camera.getScreenshotAs(OutputType.FILE);
+            FileHandler.copy(screen, new File("ScreenShots/"+result.getName()+".png"));
+            test.fail("test fail");
+        } else if (ITestResult.SKIP == result.getStatus()) {
+            test.skip("test skipped");
+        }
+
+    }
+
+
+    @AfterTest
+    public void tearDown() {
+
+        driver.quit();
+        System.out.println("After Test");
+
+    }
     @AfterSuite
     public void saveReport() throws IOException {
         extentReports.flush();
         Desktop.getDesktop().browse(new File("reports/extentReprt.html").toURI());
     }
 
-    @BeforeClass
-    public void goHome()
-    {
-        WebDriverManager.chromedriver().setup();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().window().fullscreen();
-        homePage = new HomePage(driver);
-        driver.navigate().to(demoLink);
-        System.out.println("befor test");
-    }
-
-
-
-
-
-//    @BeforeMethod
-//    public void print(Method method)
-//    {
-//        System.out.println("befor Method");
-//        System.out.println(method.getName());
-//
-//
-//    }
-    @AfterMethod
-    public void print2(ITestResult result)
-    {
-        System.out.println("After Method");
-        System.out.println(result.getName());
-        test=extentReports.createTest(result.getName());
-        if (ITestResult.SUCCESS== result.getStatus())
-        {
-            test.pass("test is pass");
-        } else if (ITestResult.FAILURE== result.getStatus())
-        {
-            test.fail("test fail");
-        } else if (ITestResult.SKIP==result.getStatus()) {
-            test.skip("test skipped");
-        }
-
-
-    }
-
-    @AfterClass
-    public void tearDown() {
-
-        driver.quit();
-
-    }
 
 
 }

@@ -12,6 +12,7 @@ public class searchResultValidation  extends BaseTest {
     @Test
     public void searchAndValidateResults()
     {
+        homePage=new HomePage(driver);
         homePage.setSearchField(searchKeyword)
                         .clickSearchButton();
         SoftAssert softAssert=new SoftAssert();
