@@ -10,7 +10,7 @@ public class InValidLogin extends BaseTest {
 
 
 
-    @Test
+    @Test(groups = "regression")
     public void loginWithInvalidEmailAndPassword1()
     {
        // test= extentReports.createTest("loginWithInvalidEmailAndPassword1");

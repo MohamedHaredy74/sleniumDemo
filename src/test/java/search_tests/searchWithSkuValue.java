@@ -10,7 +10,7 @@ import static utils.SkuKeyword.*;
 
 public class searchWithSkuValue extends BaseTest {
 
-    @Test
+    @Test(groups = "regression")
     public void searchWithSkuValue()
     {
         homePage=new HomePage(driver);

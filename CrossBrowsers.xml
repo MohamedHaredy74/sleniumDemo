@@ -2,25 +2,26 @@
 
 <suite name="Suite1" verbose="1" >
 
-    <test name="multiple_tests1">
+    <test name="ChromeBrowser">
+        <parameter name="BrowserType" value="Chrome"/>
         <classes>
             <class name="login_tests.InValidLogin">
                 <methods>
                     <include name="loginWithInvalidEmailAndPassword1"/>
                 </methods>
             </class>
-            <class name="register_tests.ValidRegister">
-                <methods>
-                    <include name="registerWithValidCredentials"/>
-                    <include name="registerWithValidData"/>
-                </methods>
-            </class>
-            <class name="currencies_tests.Currency">
-                <methods>
-                    <include name="Currency"/>
-                </methods>
-            </class>
 
+        </classes>
+    </test>
+
+    <test name="FireFoxBrowser">
+        <parameter name="BrowserType" value="firefox"/>
+        <classes>
+            <class name="login_tests.InValidLogin">
+                <methods>
+                    <include name="loginWithInvalidEmailAndPassword1"/>
+                </methods>
+            </class>
 
         </classes>
     </test>

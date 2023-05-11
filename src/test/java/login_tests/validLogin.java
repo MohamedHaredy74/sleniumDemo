@@ -11,7 +11,7 @@ public class validLogin extends BaseTest {
     private String validEmail="automation@gmail.com";
     private String validPassword="Test!123";
 
-    @Test
+    @Test(groups = "smoke")
     public void loginWithValidCredentials()
     {
         homePage=new HomePage(driver);

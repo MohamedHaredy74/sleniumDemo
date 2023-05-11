@@ -11,6 +11,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -52,11 +54,24 @@ public class BaseTest {
 
 
     @BeforeTest
-    public void setUp()
+    @Parameters("BrowserType")
+    public void setUp(String browserType)
     {
-        WebDriverManager.chromedriver().setup();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
+        if (browserType.equalsIgnoreCase("Chrome"))
+        {
+            WebDriverManager.chromedriver().setup();
+            options.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(options);
+        } else if (browserType.equalsIgnoreCase("FireFox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver=new FirefoxDriver();
+        }
+        else if (browserType.equalsIgnoreCase("Edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver=new EdgeDriver();
+        }
+
+
         driver.manage().window().fullscreen();
         System.out.println("Befor test");
     }

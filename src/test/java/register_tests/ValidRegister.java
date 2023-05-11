@@ -14,7 +14,7 @@ import java.io.IOException;
 public class ValidRegister extends BaseTest {
     String currentTime = String.valueOf(System.currentTimeMillis());
     String mail="automation"+ currentTime +"@gmail.com";
-    @Test (priority = 1)
+    @Test (priority = 1,groups = "smoke")
     public void registerWithValidCredentials()
     {
         //test= extentReports.createTest("registerWithValidCredentials");
@@ -35,7 +35,7 @@ public class ValidRegister extends BaseTest {
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2,groups = "regression")
     public void registerWithValidData() throws IOException, ParseException {
         //test= extentReports.createTest("registerWithValidData");
         RegisterData data=new RegisterData();
